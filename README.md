@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <h1>Mohit Kumar Portfolio</h1>
+    <h1>Mohit's Portfolio</h1>
     <p>This is a portfolio website for Mohit Kumar, showcasing his skills, projects, and contact information.</p>
     <h2>Features</h2>
     <ul>
