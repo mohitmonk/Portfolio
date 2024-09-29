@@ -2,4 +2,3 @@ services:
   - type: web
     name: Portfolio
     env: static
-    publish: /public  # Change 'public' to the folder where your files are stored
