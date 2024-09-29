@@ -1,7 +1,6 @@
 services:
-  - type: web
+  - type: static
     name: Portfolio
     env: static
     static_publish_path: public
-    build_command: ''
     plan: free
