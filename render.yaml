@@ -2,4 +2,4 @@ services:
   - type: web
     name: Portfolio
     env: static
-    plan: free
+    publish: /build  # Update this to the correct folder for your static files
