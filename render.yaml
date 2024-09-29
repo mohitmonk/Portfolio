@@ -1,5 +1,5 @@
 services:
-  - type: static
+  - type: web
     name: Portfolio
     env: static
     static_publish_path: public
