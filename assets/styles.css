@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Kosugi Maru', sans-serif; /* anime font */
+  font-family: 'Kosugi Maru', sans-serif;
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
@@ -29,7 +29,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  right: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -39,12 +38,10 @@ header {
   transition: .3s;
 }
 
-/* Navbar */
 .logo {
   color: var(--text-color);
   font-size: 1.8rem;
   font-weight: 600;
-  animation: slidaRight 2s ease forwards;
 }
 
 span {
@@ -65,29 +62,26 @@ span {
 .navbar a:hover {
   color: var(--main-color);
   border-bottom: 2px solid var(--main-color);
-  transition: .3s;
 }
 
 #menu-icon {
   font-size: 28px;
-  z-index: 10001;
   cursor: pointer;
   display: none;
 }
 
-/* Home Section */
+/* Sections */
 section {
   padding: 120px 14%;
 }
 
+/* Home */
 .home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 6rem;
   align-items: center;
-  position: relative;
   height: 100vh;
-  width: 100%;  
 }
 
 .home-img img {
@@ -95,62 +89,21 @@ section {
   max-width: 100%;
   height: auto;
   margin-left: 140px;
-  
 }
 
-.home-text h5 {
-  color: var(--text-color);
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0 0 20px;
-}
-
-.home-text h1 {
-  color: var(--text-color);
-  font-size: var(--big-font);
-  font-weight: 700;
-  margin: 0 0 20px;
-  line-height: 1;
-}
-#p1 a img{
-  max-width: 100%;
-  height: auto;
-  padding-bottom:20px;
-  margin-left: 0%;
-}
-#p2 a img{
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 40px;
-    margin-left: 0%;
-    padding-top: 77px;
-}
-#p3 a img{
-    max-width: 100%;
-    height: auto;
-    padding-bottom: 30px;
-    margin-left: 0%;
-    padding-top: 50px;
-}
-.home-text h6 {
-  color: var(--text-color);
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 25px;
-}
+.home-text h5 { font-size: 25px; margin-bottom: 20px; }
+.home-text h1 { font-size: var(--big-font); margin-bottom: 20px; }
+.home-text h6 { font-size: 18px; margin-bottom: 25px; }
 
 .btn {
   background: var(--main-color);
   color: var(--text-color);
   box-shadow: 4px 4px var(--text-color);
-  display: inline-block;
   padding: 0 25px;
   line-height: 42px;
-  border: 1px solid transparent;
   font-size: 14px;
-  font-weight: 400;
   letter-spacing: 2px;
-  transition: ease all 0.35s;
+  transition: .35s;
 }
 
 .btn:hover {
@@ -159,142 +112,113 @@ section {
   box-shadow: 4px 4px var(--main-color);
 }
 
-/* About Section */
+/* About */
 .about {
   display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
   align-items: center;
 }
 
 .about-img img {
   width: 300px;
-  max-width: 100%;
-  height: auto;
   margin-left: 80px;
 }
 
 .about-text h3 {
-  color: var(--text-color);
   font-size: 30px;
-  font-weight: 300;
-  margin: 0 0 30px;
   letter-spacing: 6px;
+  margin-bottom: 30px;
 }
 
 .about-text h2 {
   font-size: var(--h2-font);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-  max-width: 470;
   margin-bottom: 2rem;
 }
 
 .about-text p {
   color: var(--2nd-main-color);
-  font-size: var(--p-font);
-  font-weight: 300;
   line-height: 1.8rem;
-  margin-bottom: 1.5rem;
   max-width: 570px;
 }
 
-.main-btn .btn {
-  margin-right: 20px;
-}
-
-/* Services Section */
+/* Center heading */
 .center {
   text-align: center;
 }
 
 .center h3 {
-  color: var(--text-color);
   font-size: 30px;
-  font-weight: 300;
   letter-spacing: 6px;
 }
 
+/* Services & Projects Grid */
 .service-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-  grid-gap: 2rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 4.4rem;
 }
 
+/* Card */
 .row {
   background: #0b0b13;
   padding: 60px 35px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all .40s;
+  transition: .4s;
 }
 
-.row i{
+.row:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.7);
+}
+
+.row i {
   color: var(--main-color);
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .row h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
   margin-bottom: 20px;
-  color: var(--text-color);
 }
 
 .row p {
-  font-size: 18px;
   color: var(--2nd-main-color);
   line-height: 30px;
 }
 
-.row:hover {
-  transform: translateY(-15px);
-  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
+/* ✅ PROJECT IMAGE FIX */
+#projects .row {
+  padding: 30px 25px;
 }
 
-/* CTA Section */
+#projects .row img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* CTA */
 .cta {
   background: #0b0b13;
-  width: 100%;
   padding: 150px 0;
   text-align: center;
   margin: 100px auto;
 }
 
 .cta h4 {
-  color: var(--text-color);
   font-size: 1.6rem;
-  font-weight: 300;
   margin-bottom: 30px;
 }
 
-/* Resume Section */
-.resume {
-  text-align: center;
-}
-
-.resume h3 {
-  color: var(--text-color);
-  font-size: 30px;
-  font-weight: 580;
-  margin: 0 0 30px;
-  letter-spacing: 6px;
-}
-
-.resume .center {
-  display: flex;
-  justify-content: center;
-}
-
+/* Resume */
 .resume-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, auto));
-  grid-gap: 3rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3rem;
   margin-top: 4.4rem;
 }
 
@@ -302,354 +226,70 @@ section {
   background: #0b0b13;
   padding: 40px 30px;
   border-radius: 5px;
-  cursor: pointer;
-  transition: all .40s;
-}
-
-.box h6 {
-  color: #3e4455;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.box h4 {
-  color: var(--text-color);
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-top: 25px;
-  margin-bottom: 13px;
-}
-
-.box p {
-  font-size: var(--p-font);
-  font-weight: 300;
-  margin-bottom: 1.2rem;
-  line-height: 1.8rem;
-  color: var(--2nd-main-color);
-}
-
-.box h5 {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--2nd-main-color);
+  transition: .4s;
 }
 
 .box:hover {
-  transform: translate(-15px);
-  box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.7);
 }
 
-/* Contact Section */
-.contact {
-  text-align: center;
-}
-
-.contact-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.contact-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4.2rem;
-}
-
+/* Contact */
 .contact-form form {
-  position: relative;
   width: 550px;
+  margin: auto;
 }
 
-form input, 
+form input,
 form textarea {
   width: 100%;
   padding: 20px;
-  outline: none;
-  border: none;
   background: #0b0b13;
   color: var(--text-color);
-  margin-bottom: 0.5rem;
   border-radius: 5px;
+  margin-bottom: .5rem;
 }
 
-form input::placeholder, 
-form textarea::placeholder {
-  color: var(--2nd-main-color);
-}
-
-textarea {
-  height: 200px;
-  resize: none;
-}
-
-form .send-btn {
-  background: var(--main-color);
-  color: var(--text-color);
-  box-shadow: 4px 4px var(--text-color);
-  display: inline-block;
-  padding: 0 25px;
-  line-height: 42px;
-  border: 1px solid transparent;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  transition: ease all 0.35s;
-  margin-top: 5px;
-}
-
-form .send-btn:hover {
-  background: var(--text-color);
-  color: var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
-}
-
-.social-icons {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 20px; /* Adjust as needed */
-}
-.social-icons a {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background: #7d2ae8;
-  border-radius: 50%;
-  margin-right: 22px;
-  text-align: center;
-  line-height: 35px;
-  border: 1px solid #fff;
-  outline: 2px solid #7d2ae8;
-  transition: .3s;
-}
-.social-icons a:hover {
-  transform: translateY(-5px);
-}
-.social-icons a i {
-  color: #fff;
-}
-
-/* Media query for mobile devices with screen size up to 768px */
-@media (max-width: 768px) {
-  header {
-    padding: 18px 3%;
-  }
-  #menu-icon {
-    display: block;
-  }
-  .navbar {
-    background: #0b0b13;
-    position: absolute;
-    top: -500px;
-    right: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 15px 30px 0px rgb(0 0 0 / 70%);
-    text-align: left;
-    transition: 0.2s ease;
-  }
-  .navbar a {
-    display: block;
-    margin: 1rem;
-    padding: 1rem;
-    border-left: 2px solid var(--main-color);
-  }
-  .navbar.active {
-    top: 100%;
-  }
-
-  .home {
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-    margin-top: 80px;
-    height: auto;
-    text-align: center;
-    padding: 50px 3%;
-  }
-  .home-img img {
-    width: 100%;
-    height: auto;
-  }
-  .home-text h5 {
-    font-size: 20px;
-  }
-  .home-text h1 {
-    font-size: 2.5rem;
-  }
-  .home-text h6 {
-    font-size: 14px;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 50px 3%;
-  }
-  .about-img-container img {
-    width: 100%;
-  }
-  .about-text h3 {
-    font-size: 22px;
-  }
-  .about-text h2 {
-    font-size: 1.6rem;
-  }
-  .about-text p {
-    font-size: 0.9rem;
-  }
-  .resume-content {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 2rem;
-    margin-top: 4.4rem;
-  }
-  .box h4 {
-    font-size: 1rem;
-  }
-  .box p {
-    font-size: 0.8rem;
-  }
-  .box h5 {
-    font-size: 12px;
-  }
-  .contact-form form {
-    width: 100%;
-  }
-  .service-content {
-    grid-template-columns: 1fr;
-  }
-
-  .row {
-    padding: 30px 20px;
-  }
-}
+/* Footer */
 .footer {
-  background-color: #0f0e0e;
-  color: #fff;
-  padding: 20px;
+  background: #0f0e0e;
   text-align: center;
+  padding: 20px;
 }
 
-.footer-link img{
+.footer-link img {
   width: 30px;
-  height: 30px;
   margin: 10px 4px;
 }
-#linkedin img{
-  border-radius: 50px;
-}
-.footer-link img:hover{
-/*   background-color: white; */
-  border-radius: 50px;
-}
 
-.social-links {
-  margin-bottom: 20px;
-}
-
-.social-links a {
-  font-size: 20px;
-}
-
-.copyright {
-  margin-bottom: 10px;
-}
-
+/* Mobile */
 @media (max-width: 768px) {
-  .footer {
-      padding: 15px;
-  }
-}
-/* Media query for devices with screen size between 769px and 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Adjustments for header */
-  header {
-    padding: 20px 8%;
-  }
-}
+  header { padding: 18px 5%; }
+  #menu-icon { display: block; }
 
-/* Media query for devices with screen size between 481px and 768px */
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Adjustments for navbar */
-  .navbar {
-    padding: 0;
+  .home {
+    grid-template-columns: 1fr;
+    height: auto;
+    text-align: center;
   }
-  .navbar a {
-    border-left: none;
-    border-bottom: 2px solid var(--main-color);
+
+  .home-img img,
+  .about-img img {
     margin: 0;
-    padding: 1rem 0;
   }
 
-  /* Adjustments for home section */
-  .home {
-    padding: 40px 3%;
-  }
-  .home-img img {
-    margin-left: 0;
-  }
-  .home-text h1 {
-    font-size: 3rem;
-  }
-  .home-text h5 {
-    font-size: 1.5rem;
-  }
-
-  /* Adjustments for about section */
   .about {
-    padding: 40px 3%;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Media query for devices with screen size up to 480px */
 @media (max-width: 480px) {
-  /* Adjustments for header */
-  header {
-    padding: 18px 5%;
-  }
-
-  /* Adjustments for home section */
-  .home {
-    padding: 30px 3%;
-  }
-  .home-img img {
-    margin-left: 0;
-  }
-  .home-text h1 {
-    font-size: 2.5rem;
-  }
-  .home-text h5 {
-    font-size: 1.2rem;
-  }
-
-  /* Adjustments for about section */
-  .about {
-    padding: 30px 3%;
-  }
-}
-
-/* Media query for devices with screen size above 1024px */
-@media (min-width: 1025px) {
-  /* Add specific adjustments for larger screens if needed */
-}
-@media (max-width: 768px) {
-  .social-icons,.about-img {
-    display: none;
-  }
-  .home-img{
-    max-width: 50%;
-    margin-left: 25%;
-  }
-}
-
-/* Media query for devices with screen size up to 480px */
-@media (max-width: 480px) {
-  .social-icons {
-    display: none;
+  #projects .row img {
+    height: 160px;
   }
 }
